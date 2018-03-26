@@ -15,26 +15,37 @@ class IdcquanIndexSpider(scrapy.Spider):
         for sel in response.xpath("//div[@class='news_con']/div"):
             # 获取详情页链接
             url = sel.xpath("div[@class='news_nr']/a/@href").extract()
+
+            # 时间
             date = sel.xpath('span/text()').extract()
+
+            # 文章标题
             title = sel.xpath("div[@class='news_nr']/a/span[@class='title']/text()").extract()
             # print('发布日期:%s,标题:%s,链接:%s' % (date, title, url))
+
+            # 以列表页中的标题链接作为 详情页链接  执行 单页爬取的回调函数
             yield scrapy.Request(url[0], callback=self.parse_dir_contents, dont_filter=True)
 
+        # 获取下一页链接
         next_pages = response.xpath("//a[@class='next']/@href").extract()
 
+        # 判断有无下一页  有则执行回调函数
         if next_pages:
+            # 对分页链接重新组合
             # next_page = urljoin(SITE_URL, next_pages[0].extract())
-            yield scrapy.Request(next_pages[0], callback=self.parse, dont_filter=True)
 
-        # print('链接:%s' % (next_pages))
+            # 以 下一页链接为回调函数参数  重新执行爬取列表页数据
+            yield scrapy.Request(next_pages[0], callback=self.parse, dont_filter=True)
 
     # 对单页详情页 进行数据爬取
     def parse_dir_contents(self, response):
-        for con in response.xpath("//div[@class='newsbox inner']"):
+        for con in  response.xpath("//div[@class='newsbox inner']"):
             item = idcquanindexItem()
-            item['title'] = con.xpath("div[@class='article_detail article-infos']/div[@class='title']/text()").extract()
+            item['title'] = con.xpath(
+                "div[@class='article_detail article-infos']/div[@class='title']/text()").extract_first()
+            item['content'] = \
+            con.xpath("//div[@class='clear deatil article-content fontSizeSmall BSHARE_POP']").extract()[0]
 
-            # item['link'] = sel.xpath('a/@href').extract()
-            # item['desc'] = sel.xpath('text()').extract()
-            # print(item['title'])
+            # print(item)
+
             yield item
