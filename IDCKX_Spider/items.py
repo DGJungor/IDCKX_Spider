@@ -22,3 +22,4 @@ class idcquanindexItem(scrapy.Item):
     date = scrapy.Field()
     content = scrapy.Field()
     url = scrapy.Field()
+    description = scrapy.Field()

@@ -6,7 +6,7 @@ from IDCKX_Spider.items import idcquanindexItem
 
 class IdcquanIndexSpider(scrapy.Spider):
     name = "idcquanindex"
-    allowed_domains = ["dmoz.org"]
+    allowed_domains = ["idcquan.com"]
     start_urls = [
         "http://www.idcquan.com/index/index_1.shtml"
     ]
@@ -39,12 +39,17 @@ class IdcquanIndexSpider(scrapy.Spider):
 
     # 对单页详情页 进行数据爬取
     def parse_dir_contents(self, response):
-        for con in  response.xpath("//div[@class='newsbox inner']"):
+        for con in response.xpath("//div[@class='newsbox inner']"):
             item = idcquanindexItem()
+
+            # 标题
             item['title'] = con.xpath(
                 "div[@class='article_detail article-infos']/div[@class='title']/text()").extract_first()
+
+            # 内容
             item['content'] = \
-            con.xpath("//div[@class='clear deatil article-content fontSizeSmall BSHARE_POP']").extract()[0]
+                con.xpath("//div[@class='clear deatil article-content fontSizeSmall BSHARE_POP']").extract()[0].replace(
+                    '\r', '').replace('\n', '').replace('\t', '')
 
             # print(item)
 
