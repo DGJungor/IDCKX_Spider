@@ -8,7 +8,8 @@ class IdcquanIndexSpider(scrapy.Spider):
     name = "idcquanindex"
     allowed_domains = ["idcquan.com"]
     start_urls = [
-        "http://www.idcquan.com/index/index_1.shtml"
+        "http://www.idcquan.com/index/index_1.shtml",
+        # "http://www.idcquan.com/cloud/index6_1.shtml"
     ]
 
     def parse(self, response):
