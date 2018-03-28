@@ -15,11 +15,35 @@ class IdckxSpiderItem(scrapy.Item):
 
 
 class idcquanindexItem(scrapy.Item):
-    # item['title'] = scrapy.Field()
-    # item = scrapy.Field()
-    title = scrapy.Field()
-    link = scrapy.Field()
-    date = scrapy.Field()
-    content = scrapy.Field()
+    # 文章识别码   一般为  主域+下划线+文章ID   idcquan.com_9527
+    dis_id = scrapy.Field()
+
+    # 文章链接
     url = scrapy.Field()
+
+    # 文章标题
+    title = scrapy.Field()
+
+    # 文章分类
+    category = scrapy.Field()
+
+    # 文章来源
+    source = scrapy.Field()
+
+    # 文章日期
+    date = scrapy.Field()
+
+    # 关键词
+    keywords = scrapy.Field()
+
+    # 文章描述
     description = scrapy.Field()
+
+    # 文章内容
+    content = scrapy.Field()
+
+    # 缩略图
+    thumbnail = scrapy.Field()
+
+    # 更多信息
+    more = scrapy.Field()

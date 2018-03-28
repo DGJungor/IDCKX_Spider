@@ -64,10 +64,10 @@ COOKIES_ENABLED = False
 
 # Configure item pipelines
 # See https://doc.scrapy.org/en/latest/topics/item-pipeline.html
-ITEM_PIPELINES = {
-   'IDCKX_Spider.pipelines.IdckxSpiderPipeline': 300,
-   'IDCKX_Spider.pipelines.IdckxSpiderJsonWithEncodingPipeline': 300,
-}
+# ITEM_PIPELINES = {
+#    'IDCKX_Spider.pipelines.IdckxSpiderPipeline': 300,
+#    'IDCKX_Spider.pipelines.IdckxSpiderJsonWithEncodingPipeline': 300,
+# }
 
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See https://doc.scrapy.org/en/latest/topics/autothrottle.html

@@ -52,6 +52,6 @@ class IdcquanIndexSpider(scrapy.Spider):
                 con.xpath("//div[@class='clear deatil article-content fontSizeSmall BSHARE_POP']").extract()[0].replace(
                     '\r', '').replace('\n', '').replace('\t', '')
 
-            # print(item)
+            print('123123123123')
 
-            yield item
+            # yield item
