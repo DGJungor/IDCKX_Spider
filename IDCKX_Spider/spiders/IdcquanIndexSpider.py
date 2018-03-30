@@ -52,7 +52,6 @@ class IdcquanIndexSpider(scrapy.Spider):
             # 以 下一页链接为回调函数参数  重新执行爬取列表页数据
             yield scrapy.Request(next_pages[0], callback=self.parse, dont_filter=True)
 
-
     # 对单页详情页 进行数据爬取
     def parse_dir_contents(self, response):
         for con in response.xpath("//div[@class='newsbox inner']"):
@@ -66,6 +65,10 @@ class IdcquanIndexSpider(scrapy.Spider):
             # 关键词
             # 描述
             # 来源
+            item['source'] = con.xpath(
+                "div[@class='article_detail article-infos']/div[@class='authorbox clearfix']/div[@class='source']/text()").extract()[
+                0].replace(
+                '\r', '').replace('\n', '').replace('\t', '').replace(' ', '').replace('来源：', '')
 
             # 内容
             item['content'] = \
@@ -78,6 +81,6 @@ class IdcquanIndexSpider(scrapy.Spider):
             # 缩略图
             item['thumbnail'] = response.meta['thumbnail'][0]
 
-            print(item['thumbnail'])
+            print(item['source'])
 
             # yield item
