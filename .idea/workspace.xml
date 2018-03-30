@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="278659f2-918e-438b-99a4-4134d6e79fed" name="默认的" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/IDCKX_Spider/spiders/IdcquanIndexSpider.py" beforeDir="false" afterPath="$PROJECT_DIR$/IDCKX_Spider/spiders/IdcquanIndexSpider.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -40,8 +39,8 @@
       <file leaf-file-name="IdcquanIndexSpider.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/IDCKX_Spider/spiders/IdcquanIndexSpider.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="559">
-              <caret line="88" column="44" selection-start-line="88" selection-start-column="44" selection-end-line="88" selection-end-column="44" />
+            <state relative-caret-position="541">
+              <caret line="86" column="65" selection-start-line="86" selection-start-column="65" selection-end-line="86" selection-end-column="65" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
               </folding>
@@ -122,11 +121,11 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="-48" />
-    <option name="y" value="6" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="585" />
+    <option name="y" value="87" />
     <option name="width" value="1936" />
-    <option name="height" value="1041" />
+    <option name="height" value="1034" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -294,7 +293,7 @@
     </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-48" y="0" width="1936" height="1047" extended-state="0" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -303,7 +302,7 @@
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Python Console" order="7" weight="0.3188248" />
-      <window_info anchor="bottom" x="599" y="157" width="1217" height="816" id="Terminal" order="7" type="WINDOWED" weight="0.3295838" />
+      <window_info active="true" anchor="bottom" x="672" y="84" width="1217" height="816" id="Terminal" order="7" type="WINDOWED" visible="true" weight="0.3295838" />
       <window_info anchor="bottom" id="运行" order="7" weight="0.30396476" />
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.13059701" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
@@ -715,8 +714,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/IDCKX_Spider/spiders/IdcquanIndexSpider.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="559">
-          <caret line="88" column="44" selection-start-line="88" selection-start-column="44" selection-end-line="88" selection-end-column="44" />
+        <state relative-caret-position="541">
+          <caret line="86" column="65" selection-start-line="86" selection-start-column="65" selection-end-line="86" selection-end-column="65" />
           <folding>
             <element signature="e#0#13#0" expanded="true" />
           </folding>

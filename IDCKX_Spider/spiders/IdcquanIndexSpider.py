@@ -26,6 +26,9 @@ class IdcquanIndexSpider(scrapy.Spider):
 			# thumbnail  缩略图
 			thumbnail = sel.xpath('a/img/@src').extract()
 
+			# 分类 category
+			category = sel.xpath("div[@class='news_nr']/a/span[@class='tip']/text()").extract()
+
 			# 以列表页中的标题链接作为 详情页链接  执行 单页爬取的回调函数
 			# yield scrapy.Request(url[0], callback=self.parse_dir_contents, dont_filter=True)
 			res = scrapy.Request(url[0], callback=self.parse_dir_contents, dont_filter=True)
@@ -38,6 +41,9 @@ class IdcquanIndexSpider(scrapy.Spider):
 
 			# 传参 文章链接
 			res.meta['url'] = url
+
+			# 传参 分类
+			res.meta['category'] = category
 
 			yield res
 
@@ -54,10 +60,10 @@ class IdcquanIndexSpider(scrapy.Spider):
 
 	# 对单页详情页 进行数据爬取
 	def parse_dir_contents(self, response):
-		for con in response.xpath("//div[@class='newsbox inner']"):
-			# 实例化
-			item = idcquanindexItem()
+		# 实例化
 
+		item = idcquanindexItem()
+		for con in response.xpath("//div[@class='newsbox inner']"):
 			# 标题
 			item['title'] = con.xpath(
 				"div[@class='article_detail article-infos']/div[@class='title']/text()").extract_first()
@@ -76,11 +82,16 @@ class IdcquanIndexSpider(scrapy.Spider):
 
 			# 内容
 			item['content'] = \
-				con.xpath("//div[@class='clear deatil article-content fontSizeSmall BSHARE_POP']").extract()[0].replace(
-					'\r', '').replace('\n', '').replace('\t', '')
+				con.xpath("//div[@class='clear deatil article-content fontSizeSmall BSHARE_POP']").extract()[
+					0].replace(
+					'\r', '').replace('\n', '').replace('\t', '').replace(
+					' class="clear deatil article-content fontSizeSmall BSHARE_POP"', '')
 
 			# 日期时间
 			item['date'] = response.meta['date'][0]
+
+			# 分类
+			item['category'] = response.meta['category'][0]
 
 			# 缩略图
 			item['thumbnail'] = response.meta['thumbnail'][0]
@@ -88,6 +99,6 @@ class IdcquanIndexSpider(scrapy.Spider):
 			# 文章链接
 			item['url'] = response.meta['url'][0]
 
-			print(item['url'])
+			print(item['content'])
 
-		# yield item
+# yield item
