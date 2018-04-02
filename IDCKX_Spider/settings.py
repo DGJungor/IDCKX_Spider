@@ -64,10 +64,10 @@ COOKIES_ENABLED = False
 
 # Configure item pipelines
 # See https://doc.scrapy.org/en/latest/topics/item-pipeline.html
-# ITEM_PIPELINES = {
-#    'IDCKX_Spider.pipelines.IdckxSpiderPipeline': 300,
-#    'IDCKX_Spider.pipelines.IdckxSpiderJsonWithEncodingPipeline': 300,
-# }
+ITEM_PIPELINES = {
+   'IDCKX_Spider.pipelines.IdckxMySQLPipeline': 300,
+   # 'IDCKX_Spider.pipelines.IdckxSpiderJsonWithEncodingPipeline': 300,
+}
 
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See https://doc.scrapy.org/en/latest/topics/autothrottle.html
@@ -95,7 +95,7 @@ AUTOTHROTTLE_DEBUG = False
 USER_AGENT = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_3) AppleWebKit/536.5 (KHTML, like Gecko) Chrome/19.0.1084.54 Safari/536.5'
 # start MySQL database configure setting
 MYSQL_HOST = 'localhost'
-MYSQL_DBNAME = 'idckx_spider_post'
+MYSQL_DBNAME = 'idckx'
 MYSQL_USER = 'root'
 MYSQL_PASSWD = 'root'
 # end of MySQL database configure setting

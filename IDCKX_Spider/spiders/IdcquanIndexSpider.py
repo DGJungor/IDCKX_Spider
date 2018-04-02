@@ -8,8 +8,8 @@ class IdcquanIndexSpider(scrapy.Spider):
 	name = "idcquanindex"
 	allowed_domains = ["idcquan.com"]
 	start_urls = [
-		"http://www.idcquan.com/index/index_1.shtml",
-		# "http://www.idcquan.com/cloud/index6_1.shtml"
+		# "http://www.idcquan.com/index/index_1.shtml",
+		"http://www.idcquan.com/cloud/index6_1.shtml"
 	]
 
 	def parse(self, response):
@@ -66,7 +66,8 @@ class IdcquanIndexSpider(scrapy.Spider):
 		for con in response.xpath("//div[@class='newsbox inner']"):
 			# 标题
 			item['title'] = con.xpath(
-				"div[@class='article_detail article-infos']/div[@class='title']/text()").extract_first()
+				"div[@class='article_detail article-infos']/div[@class='title']/text()").extract_first().replace(
+				'\r', '').replace('\n', '').replace('\t', '').replace('<br>', '').replace(' ', '')
 
 			# 关键词 keywords
 			item['keywords'] = con.xpath("//meta[@name='keywords']/@content").extract_first().replace(' ', ',')
@@ -76,8 +77,7 @@ class IdcquanIndexSpider(scrapy.Spider):
 
 			# 来源
 			item['source'] = con.xpath(
-				"div[@class='article_detail article-infos']/div[@class='authorbox clearfix']/div[@class='source']/text()").extract()[
-				0].replace(
+				"div[@class='article_detail article-infos']/div[@class='authorbox clearfix']/div[@class='source']/text()").extract_first().replace(
 				'\r', '').replace('\n', '').replace('\t', '').replace(' ', '').replace('来源：', '')
 
 			# 内容
@@ -99,6 +99,6 @@ class IdcquanIndexSpider(scrapy.Spider):
 			# 文章链接
 			item['url'] = response.meta['url'][0]
 
-			print(item['content'])
+		# print(item['url'])
 
-# yield item
+		yield item
