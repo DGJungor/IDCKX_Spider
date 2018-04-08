@@ -14,8 +14,8 @@ class IdckxSpiderItem(scrapy.Item):
 	pass
 
 
-class idcquanindexItem(scrapy.Item):
-	# 文章识别码   一般为  主域+下划线+文章ID   idcquan.com_9527
+class idcquanItem(scrapy.Item):
+	# 文章识别码   一般为  主域+下划线+文章ID  例: idcquan.com_9527
 	dis_id = scrapy.Field()
 
 	# 文章链接

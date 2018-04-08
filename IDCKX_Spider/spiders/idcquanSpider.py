@@ -1,11 +1,12 @@
 import scrapy
+import time
 from urllib.parse import urljoin
 
-from IDCKX_Spider.items import idcquanindexItem
+from IDCKX_Spider.items import idcquanItem
 
 
-class IdcquanIndexSpider(scrapy.Spider):
-	name = "idcquanindex"
+class idcquanSpider(scrapy.Spider):
+	name = "idcquan"
 	allowed_domains = ["idcquan.com"]
 	start_urls = [
 		# "http://www.idcquan.com/index/index_1.shtml",
@@ -60,9 +61,9 @@ class IdcquanIndexSpider(scrapy.Spider):
 
 	# 对单页详情页 进行数据爬取
 	def parse_dir_contents(self, response):
-		# 实例化
 
-		item = idcquanindexItem()
+		# 实例化
+		item = idcquanItem()
 		for con in response.xpath("//div[@class='newsbox inner']"):
 			# 标题
 			item['title'] = con.xpath(
@@ -88,7 +89,12 @@ class IdcquanIndexSpider(scrapy.Spider):
 					' class="clear deatil article-content fontSizeSmall BSHARE_POP"', '')
 
 			# 日期时间
+			# item['date'] = time.mktime(response.meta['date'][0])
 			item['date'] = response.meta['date'][0]
+
+			# 转时间戳
+			timeArray = time.strptime(item['date'], "%Y-%m-%d %H:%M:%S")
+			item['date'] = int(time.mktime(timeArray))
 
 			# 分类
 			item['category'] = response.meta['category'][0]
@@ -99,6 +105,6 @@ class IdcquanIndexSpider(scrapy.Spider):
 			# 文章链接
 			item['url'] = response.meta['url'][0]
 
-		# print(item['url'])
+			print(item['date'])
 
 		yield item
