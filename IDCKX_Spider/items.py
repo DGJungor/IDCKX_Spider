@@ -50,3 +50,6 @@ class idcquanItem(scrapy.Item):
 
 	# 爬虫添加时间
 	create_time = scrapy.Field()
+
+
+
