@@ -4,6 +4,8 @@ import time
 from urllib.parse import urljoin
 from IDCKX_Spider.items import idcquanItem
 from scrapy.utils.project import get_project_settings  # 导入seetings配置
+from scrapy.utils.response import get_base_url  # 获取链接模块
+from tld import get_tld  # 获取文章主域的模块
 
 
 class idcquanSpider(scrapy.Spider):
@@ -92,6 +94,9 @@ class idcquanSpider(scrapy.Spider):
         # 实例化
         item = idcquanItem()
         for con in response.xpath("//div[@class='newsbox inner']"):
+            # 文章所属主域
+            item['host'] = get_tld(get_base_url(response))
+
             # 标题
             item['title'] = con.xpath(
                 "div[@class='article_detail article-infos']/div[@class='title']/text()").extract_first().replace(
@@ -109,7 +114,11 @@ class idcquanSpider(scrapy.Spider):
                 '\r', '').replace('\n', '').replace('\t', '').replace(' ', '').replace('来源：', '')
             # 如果内容为空则添加来源文字为位置来源
             if item['source'] == '':
-                item['source'] = '未知来源'
+                item['source'] = con.xpath(
+                    "div[@class='article_detail article-infos']/div[@class='authorbox clearfix']/div[@class='source']/a/text()").extract_first().replace(
+                    '\r', '').replace('\n', '').replace('\t', '').replace(' ', '').replace('来源：', '')
+                if item['source'] == '':
+                    item['source'] = '未知'
 
             # 内容
             item['content'] = \
@@ -151,7 +160,7 @@ class idcquanSpider(scrapy.Spider):
                                db=dbparams['db'], charset=dbparams['charset'])
 
         cursor = conn.cursor()
-        cursor.execute("SELECT idckx_spider_post.date FROM idckx_spider_post ORDER BY date DESC")
+        cursor.execute("SELECT idckx_spider_post.date FROM idckx_spider_post WHERE idckx_spider_post.`host`='idcquan.com' ORDER BY date DESC")
 
         # 获取剩余结果的第一行数据
         latest_date = cursor.fetchone()

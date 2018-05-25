@@ -30,7 +30,7 @@ class DBHelper():
 
     # 创建数据库
     def insert(self, item):
-        sql = "insert into idckx_spider_post(title,url,keywords,description,source,date,content,create_time) values(%s,%s,%s,%s,%s,%s,%s,%s)"
+        sql = "insert into idckx_spider_post(title,host,url,keywords,description,source,date,content,create_time) values(%s,%s,%s,%s,%s,%s,%s,%s,%s)"
 
         # 调用插入的方法
         query = self.dbpool.runInteraction(self._conditional_insert, sql, item)
@@ -44,7 +44,7 @@ class DBHelper():
     def _conditional_insert(self, tx, sql, item):
         item['create_time'] = time.strftime('%Y-%m-%d %H:%M:%S',
                                             time.localtime(time.time()))
-        params = (item["title"], item['url'], item['keywords'], item['description'], item['source'], item['date'],
+        params = (item["title"], item["host"], item['url'], item['keywords'], item['description'], item['source'], item['date'],
                   item['content'], item['create_time'])
         tx.execute(sql, params)
 
