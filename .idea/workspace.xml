@@ -2,10 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="278659f2-918e-438b-99a4-4134d6e79fed" name="默认的" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/7dca4915-a954-40fb-bdf4-e11627bcb2e2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/7dca4915-a954-40fb-bdf4-e11627bcb2e2.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IDCKX_Spider/db/Idcquan_MySQL.py" beforeDir="false" afterPath="$PROJECT_DIR$/IDCKX_Spider/db/Idcquan_MySQL.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IDCKX_Spider/items.py" beforeDir="false" afterPath="$PROJECT_DIR$/IDCKX_Spider/items.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IDCKX_Spider/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/IDCKX_Spider/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/IDCKX_Spider/spiders/idcquanSpider.py" beforeDir="false" afterPath="$PROJECT_DIR$/IDCKX_Spider/spiders/idcquanSpider.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/test.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -59,11 +60,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="settings.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/IDCKX_Spider/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2400">
-              <caret line="100" column="21" selection-start-line="100" selection-start-column="21" selection-end-line="100" selection-end-column="21" />
+            <state relative-caret-position="2134">
+              <caret line="97" selection-start-line="97" selection-end-line="100" selection-end-column="28" />
             </state>
           </provider>
         </entry>
@@ -71,7 +72,7 @@
       <file leaf-file-name="pipelines.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/IDCKX_Spider/pipelines.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
+            <state relative-caret-position="142">
               <caret line="12" selection-start-line="12" selection-end-line="12" />
             </state>
           </provider>
@@ -80,20 +81,17 @@
       <file leaf-file-name="Idcquan_MySQL.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/IDCKX_Spider/db/Idcquan_MySQL.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1104">
-              <caret line="46" column="32" selection-start-line="46" selection-start-column="32" selection-end-line="46" selection-end-column="32" />
-              <folding>
-                <element signature="e#0#14#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="-430">
+              <caret column="14" lean-forward="true" selection-start-column="14" selection-end-column="14" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="idcquanSpider.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="idcquanSpider.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/IDCKX_Spider/spiders/idcquanSpider.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1476">
-              <caret line="163" lean-forward="true" selection-start-line="163" selection-end-line="163" />
+            <state relative-caret-position="352">
+              <caret line="16" column="50" selection-start-line="16" selection-start-column="50" selection-end-line="16" selection-end-column="50" />
               <folding>
                 <element signature="e#0#24#0" expanded="true" />
               </folding>
@@ -101,10 +99,28 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="dmoz_spider.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/IDCKX_Spider/spiders/dmoz_spider.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="242">
+              <caret line="11" column="37" selection-start-line="11" selection-start-column="32" selection-end-line="11" selection-end-column="37" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="__init__.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/IDCKX_Spider/spiders/__init__.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="88">
+              <caret line="4" selection-start-line="4" selection-end-line="4" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="items.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/IDCKX_Spider/items.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="456">
+            <state relative-caret-position="418">
               <caret line="19" selection-start-line="19" selection-end-line="19" />
             </state>
           </provider>
@@ -113,8 +129,8 @@
       <file leaf-file-name="test.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="9" selection-start-line="9" selection-end-line="21" />
+            <state relative-caret-position="264">
+              <caret line="12" column="9" selection-start-line="12" selection-start-column="9" selection-end-line="12" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -122,7 +138,7 @@
       <file leaf-file-name="test2.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test2.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="552">
+            <state relative-caret-position="506">
               <caret line="23" column="22" selection-start-line="23" selection-start-column="22" selection-end-line="23" selection-end-column="22" />
             </state>
           </provider>
@@ -164,10 +180,10 @@
         <option value="$PROJECT_DIR$/IDCKX_Spider/pipelines.py" />
         <option value="$PROJECT_DIR$/IDCKX_Spider/spiders/IdcquanIndexSpider.py" />
         <option value="$PROJECT_DIR$/scrapy.cfg" />
-        <option value="$PROJECT_DIR$/IDCKX_Spider/settings.py" />
-        <option value="$PROJECT_DIR$/test.py" />
         <option value="$PROJECT_DIR$/IDCKX_Spider/items.py" />
         <option value="$PROJECT_DIR$/IDCKX_Spider/db/Idcquan_MySQL.py" />
+        <option value="$PROJECT_DIR$/test.py" />
+        <option value="$PROJECT_DIR$/IDCKX_Spider/settings.py" />
         <option value="$PROJECT_DIR$/IDCKX_Spider/spiders/idcquanSpider.py" />
       </list>
     </option>
@@ -181,9 +197,9 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="589" />
+    <option name="y" value="44" />
     <option name="width" value="1936" />
     <option name="height" value="1056" />
   </component>
@@ -192,7 +208,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -221,12 +236,13 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Spider_Movie" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
@@ -402,7 +418,7 @@
     </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="调试" order="7" weight="0.3293348" />
@@ -411,8 +427,8 @@
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Python Console" order="7" weight="0.31842965" />
-      <window_info active="true" anchor="bottom" x="665" y="179" width="979" height="699" id="Terminal" order="7" type="WINDOWED" visible="true" weight="0.3295838" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.10364583" />
+      <window_info active="true" anchor="bottom" x="0" y="23" width="1920" height="1017" id="Terminal" order="7" type="WINDOWED" visible="true" weight="0.3295838" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14739583" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" weight="0.26652452" />
       <window_info anchor="right" id="SciView" order="3" weight="0.3298109" />
@@ -714,20 +730,8 @@
     </entry>
     <entry file="file://E:/Anaconda3/Lib/site-packages/scrapy/http/request/__init__.py" />
     <entry file="file://$PROJECT_DIR$/test3.py" />
-    <entry file="das://7dca4915-a954-40fb-bdf4-e11627bcb2e2/schema/idckx/table/idckx_user_token">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://7dca4915-a954-40fb-bdf4-e11627bcb2e2/schema/idckx/table/idckx_user_login_attempt">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="das://7dca4915-a954-40fb-bdf4-e11627bcb2e2/schema/idckx/table/idckx_user_token" />
+    <entry file="das://7dca4915-a954-40fb-bdf4-e11627bcb2e2/schema/idckx/table/idckx_user_login_attempt" />
     <entry file="file://E:/Anaconda3/Lib/site-packages/twisted/enterprise/adbapi.py" />
     <entry file="file://$PROJECT_DIR$/scrapy.cfg">
       <provider selected="true" editor-type-id="text-editor">
@@ -736,77 +740,74 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/IDCKX_Spider/spiders/dmoz_spider.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="11" column="37" selection-start-line="11" selection-start-column="32" selection-end-line="11" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/IDCKX_Spider/spiders/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="4" selection-start-line="4" selection-end-line="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/IDCKX_Spider/middlewares.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-962" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/IDCKX_Spider/settings.py">
+    <entry file="file://$PROJECT_DIR$/IDCKX_Spider/spiders/dmoz_spider.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2400">
-          <caret line="100" column="21" selection-start-line="100" selection-start-column="21" selection-end-line="100" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test2.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="552">
-          <caret line="23" column="22" selection-start-line="23" selection-start-column="22" selection-end-line="23" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="9" selection-start-line="9" selection-end-line="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/IDCKX_Spider/pipelines.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="12" selection-start-line="12" selection-end-line="12" />
+        <state relative-caret-position="242">
+          <caret line="11" column="37" selection-start-line="11" selection-start-column="32" selection-end-line="11" selection-end-column="37" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/IDCKX_Spider/items.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
+        <state relative-caret-position="418">
           <caret line="19" selection-start-line="19" selection-end-line="19" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/IDCKX_Spider/db/Idcquan_MySQL.py">
+    <entry file="file://$PROJECT_DIR$/test2.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1104">
-          <caret line="46" column="32" selection-start-line="46" selection-start-column="32" selection-end-line="46" selection-end-column="32" />
-          <folding>
-            <element signature="e#0#14#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="506">
+          <caret line="23" column="22" selection-start-line="23" selection-start-column="22" selection-end-line="23" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/IDCKX_Spider/spiders/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="12" column="9" selection-start-line="12" selection-start-column="9" selection-end-line="12" selection-end-column="9" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/IDCKX_Spider/spiders/idcquanSpider.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1476">
-          <caret line="163" lean-forward="true" selection-start-line="163" selection-end-line="163" />
+        <state relative-caret-position="352">
+          <caret line="16" column="50" selection-start-line="16" selection-start-column="50" selection-end-line="16" selection-end-column="50" />
           <folding>
             <element signature="e#0#24#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/IDCKX_Spider/db/Idcquan_MySQL.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-430">
+          <caret column="14" lean-forward="true" selection-start-column="14" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/IDCKX_Spider/pipelines.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="142">
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/IDCKX_Spider/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2134">
+          <caret line="97" selection-start-line="97" selection-end-line="100" selection-end-column="28" />
         </state>
       </provider>
     </entry>

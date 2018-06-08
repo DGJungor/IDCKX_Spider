@@ -9,7 +9,7 @@ cursor.execute("select * from tb7")
 
 # 获取剩余结果的第一行数据
 row_1 = cursor.fetchone()
-print row_1
+# print row_1
 # 获取剩余结果前n行数据
 # row_2 = cursor.fetchmany(3)
 

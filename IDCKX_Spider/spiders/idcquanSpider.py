@@ -13,7 +13,8 @@ class idcquanSpider(scrapy.Spider):
     allowed_domains = ["idcquan.com"]
     start_urls = [
         # "http://www.idcquan.com/index/index_1.shtml",
-        "http://www.idcquan.com/index/index_20.shtml",
+        # "http://www.idcquan.com/index/index_20.shtml",
+        'http://news.idcquan.com/index6_20.shtml',
         # "http://www.idcquan.com/cloud/index6_1.shtml"
     ]
 
