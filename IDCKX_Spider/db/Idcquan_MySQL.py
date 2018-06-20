@@ -38,6 +38,7 @@ class DBHelper():
         # 调用异常处理方法
         query.addErrback(self._handle_error)
 
+
         return item
 
     # 写入数据库中
@@ -48,7 +49,9 @@ class DBHelper():
                   item['content'], item['create_time'])
         tx.execute(sql, params)
 
+
     # 错误处理方法
     def _handle_error(self, failue):
         print('--------------database operation exception!!-----------------')
         print(failue)
+        print('--------------end---------------------------------------------')

@@ -13,8 +13,9 @@ class idcquanSpider(scrapy.Spider):
     allowed_domains = ["idcquan.com"]
     start_urls = [
         # "http://www.idcquan.com/index/index_1.shtml",
-        # "http://www.idcquan.com/index/index_20.shtml",
-        'http://news.idcquan.com/index6_20.shtml',
+        "http://www.idcquan.com/index/index_20.shtml",
+        # "http://www.idcquan.com/index/index_1.shtml",
+        # 'http://news.idcquan.com/index6_1.shtml',
         # "http://www.idcquan.com/cloud/index6_1.shtml"
     ]
 
@@ -150,6 +151,8 @@ class idcquanSpider(scrapy.Spider):
             yield item
         else:
             print('文章不符合入库标准')
+            print(item['date'])
+            print(self.post_latest)
 
     # 根据数据库文章时间数据数据检查重复
     def check_repetition(self):
@@ -161,7 +164,8 @@ class idcquanSpider(scrapy.Spider):
                                db=dbparams['db'], charset=dbparams['charset'])
 
         cursor = conn.cursor()
-        cursor.execute("SELECT idckx_spider_post.date FROM idckx_spider_post WHERE idckx_spider_post.`host`='idcquan.com' ORDER BY date DESC")
+        cursor.execute(
+            "SELECT idckx_spider_post.date FROM idckx_spider_post WHERE idckx_spider_post.`host`='idcquan.com' ORDER BY date DESC")
 
         # 获取剩余结果的第一行数据
         latest_date = cursor.fetchone()
