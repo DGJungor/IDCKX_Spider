@@ -34,6 +34,7 @@ class idcquanSpider(scrapy.Spider):
 
         # 查询数据库中最后一篇文章的时间
         self.post_latest = self.query_post_latest(dbparams)
+        # self.add_post_log(dbparams)
 
         # print('==============================================================')
         # print (post_lates)
@@ -89,6 +90,8 @@ class idcquanSpider(scrapy.Spider):
 
             # 以 下一页链接为回调函数参数  重新执行爬取列表页数据
             yield scrapy.Request(next_pages[0], callback=self.parse, dont_filter=True)
+
+
 
     # 对单页详情页 进行数据爬取
     def parse_dir_contents(self, response):
@@ -174,3 +177,16 @@ class idcquanSpider(scrapy.Spider):
         cursor.close()
         conn.close()
         return latest_date[0]
+
+    # 添加爬取记录
+    def add_post_log(self, dbparams):
+        conn = pymysql.connect(host=dbparams['host'], port=3306, user=dbparams['user'], passwd=dbparams['passwd'],
+                               db=dbparams['db'], charset=dbparams['charset'])
+        cursor = conn.cursor()
+        cursor.execute(
+            "INSERT INTO idckx_spider_log (type) VALUES( 0 )")
+
+        # 关闭数据库
+        cursor.close()
+        conn.close()
+        return 1

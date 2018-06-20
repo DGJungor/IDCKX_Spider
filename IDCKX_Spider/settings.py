@@ -94,14 +94,10 @@ AUTOTHROTTLE_DEBUG = False
 # USER_AGENT
 USER_AGENT = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_3) AppleWebKit/536.5 (KHTML, like Gecko) Chrome/19.0.1084.54 Safari/536.5'
 # start MySQL database configure setting
-# ===================快讯服务器===================================
-MYSQL_HOST = '183.2.242.196'
+
+# ===================测试========================================
+MYSQL_HOST = 'localhost'
 MYSQL_DBNAME = 'idckx'
 MYSQL_USER = 'root'
-MYSQL_PASSWD = 'vgy!@#mysql'
-# ===================测试========================================
-# MYSQL_HOST = 'localhost'
-# MYSQL_DBNAME = 'idckx'
-# MYSQL_USER = 'root'
-# MYSQL_PASSWD = 'root'
+MYSQL_PASSWD = 'root'
 # end of MySQL database configure setting
